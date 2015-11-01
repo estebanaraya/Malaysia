@@ -25,7 +25,7 @@ $(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= viewportHeight) {
+    if (scroll >= viewportHeight){
       header.removeClass('nav').addClass("navScroll");
     } else {
       header.removeClass("navScroll").addClass('nav');
@@ -33,7 +33,6 @@ $(function() {
   });
 });
 /*---ArrowNav---*/
-var viewportHeight = $(window).height();
 $(function() {
   //caches a jQuery object containing the header element
   var header = $("#arrowTop");
@@ -47,15 +46,23 @@ $(function() {
     }
   });
 });
-/*var previousScroll = 0;
-$(window).scroll(function(event) {
-  var scroll = $(this).scrollTop();
-  if (scroll > previousScroll) {
-    header.removeClass('nav').addClass("navScroll");
-    header.removeClass('arrow-top').addClass("arrow-topH");
-  } else {
-    header.removeClass("navScroll").addClass('nav');
-    header.removeClass("arrow-topH").addClass('arrow-top');
-  }
-  previousScroll = scroll;
-});*/
+/*---------- Hide video -----------*/
+window.onload = queryVid;
+function queryVid() {
+  if ($(window).width() <= 480) {
+$("#heroVideo").remove();
+}};
+$(function hideVid() {
+  //caches a jQuery object containing the header element
+  var header = $("#nav");
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= viewportHeight)
+    {
+      $("#heroVideo").css("display", "none");
+    } else {
+    $("#heroVideo").css("display", "inherit");
+    }
+  });
+});

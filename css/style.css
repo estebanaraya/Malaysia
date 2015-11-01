@@ -4,6 +4,12 @@
   overflow: auto;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .arrow-box {
   height: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
@@ -95,6 +101,14 @@ blockquote {
   font-size: 45px;
   margin: 0;
   letter-spacing: 0.15em;
+}
+
+.country-stats {
+  flex-direction: column;
+}
+
+.Description {
+  flex-direction: column;
 }
 
 footer {
@@ -189,7 +203,6 @@ footer {
   overflow: hidden;
 }*/
 .main-hero {
-  /*background: linear-gradient(rgba(237, 20, 91, 1), rgba(244, 119, 34, 1));*/
   color: white;
   top: 0;
   right: 0;
@@ -200,6 +213,10 @@ footer {
   background-size: cover;
   flex-direction: column;
   overflow: hidden;
+}
+
+.map {
+  width: 50%;
 }
 
 .map img {
@@ -239,6 +256,8 @@ footer {
 .nav-buttons {
   flex-direction: row;
   width: 100%;
+  max-width: 750px;
+  margin: auto;
   justify-content: space-around;
   overflow: hidden;
   align-items: center;
@@ -296,6 +315,10 @@ footer {
 
 .programs {
   flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .program-info {
@@ -380,6 +403,7 @@ footer {
 
 .texture {
   background: url("../assets/texture-05.png");
+  background-attachment: fixed;
   background-position: center;
   text-align: center;
   background-size: cover;
@@ -423,4 +447,44 @@ footer {
   min-width: 100%;
   min-height: 100%;*/
   z-index: 1000;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 745px) {
+  .main-hero {
+    background: linear-gradient(#ed145b, #f47722);
+  }
+  .headerContent {
+    background-image: url("../assets/towers-05.png");
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 745px) {
+  .content {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .Description .descriptionText {
+    column-count: 2;
+  }
+  .Description .country-stats {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .Description .country-stats .map {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .programs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
