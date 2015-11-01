@@ -199,6 +199,7 @@ footer {
   width: 100%;
   background-size: cover;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .map img {
