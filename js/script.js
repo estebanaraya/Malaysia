@@ -47,11 +47,7 @@ $(function() {
   });
 });
 /*---------- Hide video -----------*/
-window.onload = queryVid;
-function queryVid() {
-  if ($(window).width() <= 480) {
-$("#heroVideo").remove();
-}};
+
 $(function hideVid() {
   //caches a jQuery object containing the header element
   var header = $("#nav");
@@ -60,10 +56,17 @@ $(function hideVid() {
 
     if (scroll >= viewportHeight)
     {
+      $('video').removeAttr("autoplay");
       $("#heroVideo").css("display", "none");
     } else {
-    $("#heroVideo").css("display", "inherit");
+      $("#heroVideo").css("display", "inherit");
     }
   });
+});
+
+$(document).ready(function () {
+    if($(window).width() <= 745) {
+      $("#heroVideo").remove();
+    }
 });
 /***/

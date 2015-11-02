@@ -148,6 +148,12 @@ footer {
   overflow: hidden;
 }
 
+.mainHeroWrap {
+  background: linear-gradient(rgba(237, 20, 91, 0.5), rgba(244, 119, 34, 0.5));
+  height: 100vh;
+  overflow: hidden;
+}
+
 .live-hero-wrap {
   background: linear-gradient(#92278f, #007ac2);
 }
@@ -216,7 +222,7 @@ footer {
 }
 
 .map {
-  width: 50%;
+  width: 100%;
 }
 
 .map img {
@@ -224,7 +230,7 @@ footer {
 }
 
 .nav {
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   overflow: hidden;
   z-index: 10000;
@@ -427,7 +433,7 @@ footer {
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  height: auto;
+  height: 10vh;
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
@@ -451,8 +457,16 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 745px) {
+  #heroVideo {
+    display: none;
+  }
   .main-hero {
-    background: linear-gradient(#ed145b, #f47722);
+    overflow: hidden;
+    background-image: url("../assets/beach.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .headerContent {
     background-image: url("../assets/towers-05.png");
@@ -461,6 +475,9 @@ footer {
     background-repeat: no-repeat;
     background-position: bottom right;
     overflow: hidden;
+  }
+  .nav {
+    flex-direction: row;
   }
 }
 
