@@ -149,6 +149,16 @@ footer {
   z-index: 100;
   height: 100%;
 }
+.liveBG {
+  /*background-image: url("../assets/dinner.jpg");*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  z-index: 100;
+  height: 100%;
+}
 .learn-hero {
   background-image: url("../assets/hand-05.png");
   background-size: contain;
@@ -161,6 +171,16 @@ footer {
 }
 .learn-hero-wrap {
   background: linear-gradient(45deg, rgba(237, 20, 91, 1), rgba(244, 119, 34, 1));
+}
+.learnBG {
+  /*background-image: url("../assets/learnBG.jpg");*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  z-index: 100;
+  height: 100%;
 }
 .logo {
   height: auto;
