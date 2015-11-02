@@ -8,6 +8,10 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+p {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
 .arrow-box {
   height: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
@@ -78,6 +82,9 @@ blockquote {
   margin: 0 8%;
   padding: 4% 8%;
 }
+.content:first-child{
+  margin-top:0;
+}
 .content p {
   font-weight: 300;
 }
@@ -89,6 +96,7 @@ blockquote {
 }
 .country-stats {
   flex-direction: column;
+  padding: 0 8% 4% 8%;
 }
 .Description {
   flex-direction: column;
@@ -255,6 +263,13 @@ footer {
   height: 100%;
   width: 100%;
 }
+.photo-row {
+  max-width: 1200px;
+  padding: 0 8%;
+  img {
+    border: solid white 3px;
+  }
+}
 .photo-row:first-child {
   align-items: flex-end;
 }
@@ -369,12 +384,9 @@ footer {
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: 10vh;
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: linear-gradient(rgba(237, 20, 91, 0.3), rgba(244, 119, 34, 0.3));
   background-size: cover;
 }
 .headerContent {
@@ -415,25 +427,27 @@ footer {
   .nav {
     flex-direction: row;
   }
-}
+  }
 @media screen and (min-width: 745px) {
   .content {
     max-width: 1200px;
     margin: auto;
-  }
-  .Description {
-    .descriptionText {
-      column-count: 2;
+    column-count: 2;
     }
     .country-stats {
+      max-width: 1200px;
+      margin: auto;
       flex-direction: row;
-      justify-content: space-around;
-      margin-top: 20px;
+      justify-content: space-between;
+      margin-top: -3px;
+      padding-bottom: 4%;
+      .stats {
+        margin-left: 20px;
+      }
       .map {
         width: 60%;
       }
     }
-  }
 }
 @media screen and (min-width: 480px) {
   .programs {
